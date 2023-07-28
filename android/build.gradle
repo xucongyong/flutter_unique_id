@@ -1,4 +1,4 @@
-group 'com.reverse.flutter_unique_device_id'
+group 'com.reverse.unique_id'
 version '1.0'
 
 buildscript {

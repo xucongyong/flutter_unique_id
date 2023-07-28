@@ -1,8 +1,9 @@
-name: flutter_unique_device_id
-description: get flutter_unique_device_id.
-version: 0.0.4
-homepage: 'https://github.com/xucongyong/flutter_unique_device_id'
-repository: 'https://github.com/xucongyong/flutter_unique_device_id'
+name: flutter_unique_id
+description: get unique_id.
+version: 0.0.2
+homepage: "https://github.com/xucongyong/flutter_unique_id"
+repository: "https://github.com/xucongyong/flutter_unique_id"
+
 environment:
   sdk: '>=3.0.6 <4.0.0'
   flutter: ">=3.3.0"
@@ -35,10 +36,10 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.reverse.flutter_unique_device_id
-        pluginClass: OnlyUniqueDeviceIdPlugin
+        package: com.reverse.unique_id
+        pluginClass: UniqueIdPlugin
       ios:
-        pluginClass: OnlyUniqueDeviceIdPlugin
+        pluginClass: UniqueIdPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

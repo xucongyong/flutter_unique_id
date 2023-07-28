@@ -1,4 +1,5 @@
-package com.reverse.flutter_unique_device_id;
+package com.reverse.unique_id;
+
 
 import androidx.annotation.NonNull;
 
@@ -15,22 +16,23 @@ import android.view.View;
 import java.util.UUID;
 
 
-/** OnlyUniqueDeviceIdPlugin */
-public class OnlyUniqueDeviceIdPlugin implements FlutterPlugin, MethodCallHandler {
-
+/** UniqueIdPlugin */
+public class UniqueIdPlugin implements FlutterPlugin, MethodCallHandler {
+  /// The MethodChannel that will the communication between Flutter and native Android
+  ///
+  /// This local reference serves to register the plugin with the Flutter Engine and unregister it
+  /// when the Flutter Engine is detached from the Activity
   private MethodChannel channel;
-  private FlutterPluginBinding _flutterPluginBinding;
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
-    channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "flutter_unique_device_id");
+    channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "unique_id");
     channel.setMethodCallHandler(this);
-    _flutterPluginBinding = flutterPluginBinding;
   }
 
   @Override
   public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
-    if (call.method.equals("getOnlyUniqueDeviceId")) {
+    if (call.method.equals("getUniqueId")) {
       String deviceId = getUniquePsuedoID();
       result.success(deviceId);
     } else {
@@ -40,7 +42,7 @@ public class OnlyUniqueDeviceIdPlugin implements FlutterPlugin, MethodCallHandle
 
     private String getUniquePsuedoID() {
 
-        String m_szDevIDShort = "35" + (Build.BOARD.length() % 10) + (Build.BRAND.length() % 10) + (Build.CPU_ABI.length() % 10) + (Build.DEVICE.length() % 10) + (Build.MANUFACTURER.length() % 10) + (Build.MODEL.length() % 10) + (Build.PRODUCT.length() % 10);
+        String m_szDevIDShort = (Build.BOARD.length() % 10) + (Build.BRAND.length() % 10) + (Build.CPU_ABI.length() % 10) + (Build.DEVICE.length() % 10) + (Build.MANUFACTURER.length() % 10) + (Build.MODEL.length() % 10) + (Build.PRODUCT.length() % 10);
 
         String serial = null;
         try {
@@ -59,10 +61,9 @@ public class OnlyUniqueDeviceIdPlugin implements FlutterPlugin, MethodCallHandle
 
       return new UUID(m_szDevIDShort.hashCode(), serial.hashCode()).toString();
     };
-  
+
   @Override
   public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
     channel.setMethodCallHandler(null);
   }
-  
-};
+}
