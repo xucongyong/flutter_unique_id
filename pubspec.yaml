@@ -1,6 +1,6 @@
 name: only_unique_device_id
 description: get only_unique_device_id.
-version: 0.0.1
+version: 0.0.2
 homepage: 'https://github.com/xucongyong/only_unique_device_id'
 repository: 'https://github.com/xucongyong/only_unique_device_id'
 environment:
