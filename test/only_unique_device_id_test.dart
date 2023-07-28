@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:only_unique_device_id/only_unique_device_id.dart';
-import 'package:only_unique_device_id/only_unique_device_id_platform_interface.dart';
-import 'package:only_unique_device_id/only_unique_device_id_method_channel.dart';
+import 'package:flutter_unique_device_id/flutter_unique_device_id.dart';
+import 'package:flutter_unique_device_id/flutter_unique_device_id_platform_interface.dart';
+import 'package:flutter_unique_device_id/flutter_unique_device_id_method_channel.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 class MockOnlyUniqueDeviceIdPlatform

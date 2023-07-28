@@ -1,6 +1,6 @@
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-import 'only_unique_device_id_method_channel.dart';
+import 'flutter_unique_device_id_method_channel.dart';
 
 abstract class OnlyUniqueDeviceIdPlatform extends PlatformInterface {
   /// Constructs a OnlyUniqueDeviceIdPlatform.

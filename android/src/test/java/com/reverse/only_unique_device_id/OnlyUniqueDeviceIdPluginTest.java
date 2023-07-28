@@ -1,4 +1,4 @@
-package com.reverse.only_unique_device_id;
+package com.reverse.flutter_unique_device_id;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;

@@ -6,9 +6,9 @@ A flutter plugin that can get a unique deviceId
 # use
 
 ```dart
-import 'package:only_unique_device_id/only_unique_device_id.dart' as OnlyUniqueDeviceId;
+import 'package:flutter_unique_device_id/flutter_unique_device_id.dart' as OnlyUniqueDeviceId;
 
-Future<String?> get_only_unique_device_id() async {
+Future<String?> get_flutter_unique_device_id() async {
   // ignore: non_constant_identifier_names
   String? UniqueDeviceId =
       await OnlyUniqueDeviceId.OnlyUniqueDeviceId().getOnlyUniqueDeviceId();
@@ -86,7 +86,7 @@ samples, guidance on mobile development, and a full API reference.
 
 
 
-# only_unique_device_id
+# flutter_unique_device_id
 
 A new Flutter plugin project.
 
@@ -100,4 +100,4 @@ Android and/or iOS.
 For help getting started with Flutter development, view the
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
-# only_unique_device_id
+# flutter_unique_device_id
