@@ -1,13 +1,13 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-import 'unique_id_platform_interface.dart';
+import 'flutter_unique_id_platform_interface.dart';
 
-/// An implementation of [UniqueIdPlatform] that uses method channels.
-class MethodChannelUniqueId extends UniqueIdPlatform {
+/// An implementation of [FlutterUniqueIdPlatform] that uses method channels.
+class MethodChannelFlutterUniqueId extends FlutterUniqueIdPlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
-  final methodChannel = const MethodChannel('unique_id');
+  final methodChannel = const MethodChannel('flutter_unique_id');
 
   @override
   Future<String?> getUniqueId() async {

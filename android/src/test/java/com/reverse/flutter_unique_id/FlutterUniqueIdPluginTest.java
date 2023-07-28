@@ -1,4 +1,4 @@
-package com.reverse.unique_id;
+package com.reverse.flutter_unique_id;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -15,10 +15,10 @@ import org.junit.Test;
  * you can run them directly from IDEs that support JUnit such as Android Studio.
  */
 
-public class UniqueIdPluginTest {
+public class FlutterUniqueIdPluginTest {
   @Test
   public void onMethodCall_getUniqueId_returnsExpectedValue() {
-    UniqueIdPlugin plugin = new UniqueIdPlugin();
+    FlutterUniqueIdPlugin plugin = new FlutterUniqueIdPlugin();
 
     final MethodCall call = new MethodCall("getUniqueId", null);
     MethodChannel.Result mockResult = mock(MethodChannel.Result.class);

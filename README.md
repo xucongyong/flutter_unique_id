@@ -1,4 +1,4 @@
-# unique_id
+# flutter_unique_id
 
 A new Flutter plugin project.
 
