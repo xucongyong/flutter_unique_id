@@ -5,8 +5,17 @@ A flutter plugin that can get a unique deviceId
 
 # use
 
-getOnlyUniqueDeviceId()
+```dart
+import 'package:only_unique_device_id/only_unique_device_id.dart' as OnlyUniqueDeviceId;
 
+Future<String?> get_only_unique_device_id() async {
+  // ignore: non_constant_identifier_names
+  String? UniqueDeviceId =
+      await OnlyUniqueDeviceId.OnlyUniqueDeviceId().getOnlyUniqueDeviceId();
+  print(UniqueDeviceId);
+  return UniqueDeviceId;
+}
+```
 
 ## About android
 I know there isn't any 'perfect' way of getting a unique ID without using permissions; however, sometimes we only really need to track the device installation. When it comes to creating a unique ID, we can create a 'pseudo unique id' based solely on information that the Android API gives us without using extra permissions. This way, we can show the user respect and try to offer a good user experience as well.
