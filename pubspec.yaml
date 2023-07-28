@@ -1,8 +1,8 @@
 name: only_unique_device_id
 description: A new Flutter plugin project.
 version: 0.0.1
-homepage:
-repository:
+homepage: 'https://github.com/xucongyong/only_unique_device_id'
+repository: 'https://github.com/xucongyong/only_unique_device_id'
 environment:
   sdk: '>=3.0.6 <4.0.0'
   flutter: ">=3.3.0"
